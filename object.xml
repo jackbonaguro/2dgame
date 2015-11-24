@@ -1,0 +1,25 @@
+<?xml>
+	<object>
+		<sprite src="box.png" />
+		<b2body dynamic="true">
+			<pos x="300" y="200" />
+		</b2body>
+		<b2fixture>
+			<center x="0" y="0" />
+			<shape type="polygon">
+				<vert x="0" y="0" />
+				<vert x="5" y="20" />
+				<vert x="10" y="0" />
+			</shape>
+			<density>1</density>
+			<friction>0.3</friction>
+			<restitution>0.4</restitution>
+		</b2fixture>
+	</object>
+</?xml>
+
+#	controls
+#	ships
+#		-engine guns etc
+#	planets
+#	cameras
