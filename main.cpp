@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "manager.h"
+#include <string>
 
 const int winw = 600;
 const int winh = 400;
@@ -136,9 +137,9 @@ void oupd(){
 
 int main(){
 
-	wrldmgr.res.loadTexture("box_anim.png");
-	wrldmgr.res.loadTexture("ball.png");
-	wrldmgr.res.loadTexture("hat.png");
+	wrldmgr.res.loadTexture("art/ChestBlue.png");
+	wrldmgr.res.loadTexture("art/Coin.png");
+	wrldmgr.res.loadTexture("art/Gem.png");
 
 	/////////////////////////////////////////////////////////////////////
 
@@ -222,7 +223,7 @@ int main(){
 
 	wrldmgr.initialize();
 
-	font.loadFromFile("Grundschrift-Normal.otf");
+	font.loadFromFile("art/Grundschrift-Normal.otf");
 	text.push_back(sf::Text("Hello!",font,20));
 	text.push_back(sf::Text("",font,15));
 	text.push_back(sf::Text("",font,15));
@@ -240,9 +241,9 @@ int main(){
 		gameclock.restart();
 		pupd(dt);
 
-		//text[1].setString("UPS: " + std::to_string(int(1/dt)));
-		//text[2].setString("Player Speed: " + std::to_string(wrldmgr.playerObj.bd->GetLinearVelocity().Length()));
-		//text[3].setString("Player Angular Speed: " + std::to_string(wrldmgr.playerObj.bd->GetAngularVelocity()));
+		text[1].setString("UPS: ");// + std::to_string(int(1/dt)));
+		text[2].setString("Player Speed: ");// + std::to_string(wrldmgr.playerObj.bd->GetLinearVelocity().Length()));
+		text[3].setString("Player Angular Speed: ");// + std::to_string(wrldmgr.playerObj.bd->GetAngularVelocity()));
 		renderEdge(ground);
 		oupd();
 	}

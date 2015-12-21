@@ -8,12 +8,12 @@ go:
 	-make run
 
 build:
-	g++ -c main.cpp
-	g++ main.o -o app -lsfml-graphics -lsfml-window -lsfml-system -lbox2d -g -v
+	g++ -c main.cpp -std=c++11
+	g++ main.o -o main.exe -std=c++11 -lsfml-graphics -lsfml-window -lsfml-system -lbox2d -g -v
 
 run:
-	./app
+	./main.exe
 
 purge:
-	-rm app
-	-rm test.o
+	-rm main.exe
+	-rm main.o
